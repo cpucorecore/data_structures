@@ -16,7 +16,7 @@ void testMaxHeap() {
     for (auto i = 90; i < 100; i++) {
         maxHeap.add(i);
     }
-    dumpBinaryTree(maxHeap);
+    dumpHeap(maxHeap);
 
     for (auto i = 0; i < 100; i++) {
         maxHeap.add(i);
@@ -31,7 +31,7 @@ void testMaxHeap() {
     for (auto i = 9; i >= 0; --i) {
         minHeap.add(i);
     }
-    dumpBinaryTree(minHeap);
+    dumpHeap(minHeap);
 
     for (auto i = 0; i <= 100000; ++i) {
         minHeap.add(i);

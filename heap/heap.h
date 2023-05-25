@@ -18,7 +18,7 @@ public:
         return size;
     }
 
-    friend void dumpBinaryTree(const Heap &h);
+    friend void dumpHeap(const Heap &heap);
 
 protected:
     int size = 0;

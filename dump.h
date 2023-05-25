@@ -6,7 +6,9 @@
 #define HELLO_CPP_DUMP_H
 
 #include "heap/heap.h"
+#include "tree/bin_search_tree.h"
 
-void dumpBinaryTree(const Heap &h);
+void dumpHeap(const Heap &heap);
+void dump_bin_search_tree(const bin_search_tree &tree);
 
 #endif //HELLO_CPP_DUMP_H

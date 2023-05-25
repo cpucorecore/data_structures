@@ -3,4 +3,4 @@ project(data_structures)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(data_structures main.cpp heap/heap.cpp heap/heap.h dump.cpp dump.h heap/heap_test.cpp heap/heap_test.h)
+add_executable(data_structures main.cpp heap/heap.cpp heap/heap.h dump.cpp dump.h heap/heap_test.cpp heap/heap_test.h tree/bin_search_tree.cpp tree/bin_search_tree.h tree/bin_search_tree_test.cpp tree/bin_search_tree_test.h)
