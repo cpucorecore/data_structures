@@ -9,8 +9,16 @@
 class bin_search_tree {
 public:
     explicit bin_search_tree(int value) : _value(value), left(nullptr), right(nullptr) {}
+
+    bin_search_tree* find(int value);
+    bin_search_tree* find_root(int value);
+    int get_value() const {
+        return _value;
+    }
+
     virtual void add(int value);
     virtual bool del(int value);
+
 
     friend void dump_bin_search_tree(const bin_search_tree &tree);
 
