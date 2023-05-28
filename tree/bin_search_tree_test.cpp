@@ -1,17 +1,12 @@
 //
-// Created by sky on 2023/5/25.
+// Created by sky on 2023/5/28.
 //
 
 #include "bin_search_tree_test.h"
 #include "bin_search_tree.h"
 
-#include <iostream>
-
-using std::cout;
-using std::endl;
-
 void test_bin_search_tree() {
-    bin_search_tree tree = bin_search_tree(10);
+    bin_search_tree tree = bin_search_tree();
     tree.add(5);
     tree.add(8);
     tree.add(15);
@@ -21,6 +16,15 @@ void test_bin_search_tree() {
     tree.add(7);
     dump_bin_search_tree(tree);
 
+    tree.del(8);
+    dump_bin_search_tree(tree);
+
+    tree.del(7);
+    dump_bin_search_tree(tree);
+
     tree.del(5);
+    dump_bin_search_tree(tree);
+
+    tree.del(14); // TODO fix bug
     dump_bin_search_tree(tree);
 }

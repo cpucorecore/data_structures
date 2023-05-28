@@ -53,13 +53,13 @@ void dumpHeap(const Heap &heap) {
 
 void dump_bin_search_tree(const bin_search_tree &tree) {
     cout << "[" << endl;
-    std::deque<const bin_search_tree*> dq{&tree};
+    std::deque<const bst_node*> dq{tree.root};
 
     while(!dq.empty()) {
-        std::deque<const bin_search_tree*> child;
+        std::deque<const bst_node*> child;
         for(auto n : dq) {
             if (n) {
-                cout << n->_value << " ";
+                cout << n->key << " ";
             } else {
                 cout << "* ";
                 child.push_back(nullptr);
