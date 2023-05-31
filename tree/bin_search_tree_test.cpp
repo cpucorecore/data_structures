@@ -25,6 +25,28 @@ void test_bin_search_tree() {
     tree.del(5);
     dump_bin_search_tree(tree);
 
-    tree.del(14); // TODO fix bug
+    tree.del(14);
     dump_bin_search_tree(tree);
+
+    bin_search_tree tree2 = bin_search_tree();
+    tree2.add(100);
+    tree2.add(90);
+    tree2.add(110);
+    tree2.add(95);
+    tree2.add(85);
+    tree2.add(80);
+    tree2.add(87);
+    dump_bin_search_tree(tree2);
+
+    tree2.del(90);
+    dump_bin_search_tree(tree2);
+
+    tree2.del(95);
+    dump_bin_search_tree(tree2);
+
+    tree2.del(100);
+    dump_bin_search_tree(tree2);
+
+    tree2.del(85);
+    dump_bin_search_tree(tree2);
 }

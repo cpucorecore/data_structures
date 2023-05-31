@@ -31,7 +31,7 @@ bool bst_node::del(int key) {
             }
             this->key = candidate->key;
             if(candidate == left) {
-                left = left->right;
+                left = left->left;
             } else {
                 candidate_root->right = candidate->left;
             }
@@ -47,7 +47,7 @@ bool bst_node::del(int key) {
             }
             this->key = candidate->key;
             if(candidate == right) {
-                right = right->left;// TODO fix bug
+                right = right->right;
             } else {
                 candidate_root->left = candidate->right;
             }
