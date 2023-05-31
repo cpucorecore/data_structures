@@ -16,6 +16,7 @@ void bin_search_tree::add(int key) {
 bool bin_search_tree::del(int key) {
     if(nullptr == root) return false;
     if(nullptr == root->left && nullptr == root->right) {
+//todo compare keys and judge if or not to del
         delete root;
         root = nullptr;
         return true;
