@@ -49,4 +49,16 @@ void test_bin_search_tree() {
 
     tree2.del(85);
     dump_bin_search_tree(tree2);
+
+    tree2.del(87);
+    dump_bin_search_tree(tree2);
+
+    tree2.del(80);
+    dump_bin_search_tree(tree2);
+
+    tree2.del(80);
+    dump_bin_search_tree(tree2);
+
+    tree2.del(110);
+    dump_bin_search_tree(tree2);
 }
