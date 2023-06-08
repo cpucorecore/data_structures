@@ -5,9 +5,7 @@
 #include "select_sort.h"
 #include "gtest/gtest.h"
 
-TEST(FactorialTest, Negative) {
-    // This test is named "Negative", and belongs to the "FactorialTest"
-    // test case.
+TEST(sort, select_sort) {
     int numbers[] = {5, 7, 9, 1, 3, 8, 10, 11, 7};
     int numbers_expected[] = {1, 3, 5, 7, 7, 8, 9, 10, 11};
     unsigned int numbers_cnt = sizeof(numbers) / sizeof(numbers[0]);
