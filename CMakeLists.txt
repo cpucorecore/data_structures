@@ -15,7 +15,8 @@ find_package(GTest CONFIG REQUIRED)
 
 add_executable(data_structures main.cpp heap/heap.cpp heap/heap.h dump.cpp dump.h heap/heap_test.cpp heap/heap_test.h tree/bin_search_tree.cpp tree/bin_search_tree.h tree/bin_search_tree_test.cpp tree/bin_search_tree_test.h tree/bst_node.cpp tree/bst_node.h)
 
+enable_testing()
+
 add_subdirectory(sort)
 
 target_link_libraries(data_structures PUBLIC sort)
-
