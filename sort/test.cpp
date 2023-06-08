@@ -3,14 +3,71 @@
 //
 
 #include "select_sort.h"
-#include "gtest/gtest.h"
+#include "insert_sort.h"
+
+#include <gtest/gtest.h>
+
+#include <iostream>
+#include <cstdlib>
+
+using std::cout;
+using std::endl;
 
 TEST(sort, select_sort) {
-    int numbers[] = {5, 7, 9, 1, 3, 8, 10, 11, 7};
-    int numbers_expected[] = {1, 3, 5, 7, 7, 8, 9, 10, 11};
-    unsigned int numbers_cnt = sizeof(numbers) / sizeof(numbers[0]);
-    select_sort(numbers, numbers_cnt);
-    for(int i=0;i<numbers_cnt;i++) {
+    srand(time(NULL));
+    const unsigned int cnt = 200000;
+
+    int numbers[cnt];
+    int numbers_expected[cnt];
+
+    for(int i=1;i<=cnt;i++) {
+        numbers[i-1] = i;
+        numbers_expected[i-1] = i;
+    }
+
+    int ri;
+    for(int i=0;i<cnt;i++) {
+        ri = rand() % cnt;
+        std::swap(numbers[0], numbers[ri]);
+    }
+
+    for(int i=0;i<100;i++) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+
+    select_sort(numbers, cnt);
+    for(int i=0;i<cnt;i++) {
+        EXPECT_EQ(numbers[i], numbers_expected[i]);
+    }
+}
+
+TEST(sort, insert_sort) {
+    srand(time(NULL));
+    const unsigned int cnt = 400000;
+
+    int numbers[cnt];
+    int numbers_expected[cnt];
+
+    for(int i=1;i<=cnt;i++) {
+        numbers[i-1] = i;
+        numbers_expected[i-1] = i;
+    }
+
+    int ri;
+    for(int i=0;i<cnt;i++) {
+        ri = rand() % cnt;
+        std::swap(numbers[0], numbers[ri]);
+    }
+
+    for(int i=0;i<100;i++) {
+        cout << numbers[i] << " ";
+    }
+    cout << endl;
+
+    insert_sort(numbers, cnt);
+
+    for(int i=0;i<cnt;i++) {
         EXPECT_EQ(numbers[i], numbers_expected[i]);
     }
 }
